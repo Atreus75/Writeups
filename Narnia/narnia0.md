@@ -101,11 +101,13 @@ All programs have something called "**stack**". The stack is a program-owned zon
 
 Let's say our program just started: the kernel defines a stack top for our program, but at this point, we have not created any variable or data, so the stack is supposed to be empty.
 
-![image-20260213224750303](/home/onumeno/.config/Typora/typora-user-images/image-20260213224750303.png)
+<img width="461" height="170" alt="image" src="https://github.com/user-attachments/assets/56dba7c2-9755-4efc-9ccf-fae71d307d12" />
+
 
 By the end of the program's execution, many variables have been created and the program's stack grew downward - below the stack - with different space sizes and data types, but the program stack top still has the same address. So the stack will look something like this:
 
-![image-20260213230123947](/home/onumeno/.config/Typora/typora-user-images/image-20260213230123947.png)
+<img width="357" height="255" alt="image" src="https://github.com/user-attachments/assets/8abe240b-076c-4525-b687-ac1335a2f1dd" />
+
 
 Look how the top is the same as before, but many addresses have appeared in the program's stack, increasing its size.
 
@@ -124,7 +126,8 @@ char buf[20];
 
 First *val* is declared, and then *buf*. So - abstracting other information used by the program, for didactic purposes - we can visualize the stack "storing" these variables in this way:
 
-![image-20260213231040929](/home/onumeno/.config/Typora/typora-user-images/image-20260213231040929.png)
+<img width="741" height="407" alt="image" src="https://github.com/user-attachments/assets/ce8689e8-7306-4506-bdcb-e9576c6f6e85" />
+
 
 Remember that variable declaration always implies the use of lower and lower addresses to define its beginning, and that's why "buf" is below "val".
 
@@ -154,9 +157,10 @@ Now, we just have to save this program in a writable directory (like under /tmp)
 $> ./exploit | /narnia/narnia0
 ```
 
-but only to notice that we didn't receive an error message, but a shell has not spawned as narnia1:
+only to notice that we didn't receive an error message, but a shell has not spawned as narnia1:
 
-![image-20260214225258083](/home/onumeno/.config/Typora/typora-user-images/image-20260214225258083.png)
+<img width="505" height="98" alt="image" src="https://github.com/user-attachments/assets/6f9d3c81-5a50-4344-a8dc-51475054015f" />
+
 
 Let's examine what is happening here:
 
@@ -173,7 +177,7 @@ $> (./exploit; cat) | /narnia/narnia0
 
 And there it is:
 
-![image-20260214230132563](/home/onumeno/.config/Typora/typora-user-images/image-20260214230132563.png)
+<img width="575" height="147" alt="image-20260214230132563" src="https://github.com/user-attachments/assets/b21ee224-d351-4ad5-bb60-75ad5e2ceb79" />
 
 # Rechapter
 
