@@ -1,5 +1,4 @@
 # Introduction
-
 This is the first level of the general challenge, so the developers gave the username and password that may be used to log into the SSH server which is called narnia.labs.overthewire.org, on port 2226 TCP.
 The username and password are both "**narnia0**".
 
